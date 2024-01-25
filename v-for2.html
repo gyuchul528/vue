@@ -36,13 +36,11 @@
             }
           },
           mounted() {
-            // バックエンドのエンドポイントを適切なものに変更してください
-            const backendEndpoint = 'http://localhost:30035/notes_from_b';
-
+            const backdata = 'http://localhost:30035/notes_from_b';
             // AXIOSを使用してデータを取得
-            axios.get(backendEndpoint)
+            axios.get(backdata)
               .then(response => {
-                this.items = response.data; // データを取得してitemsにセット
+                this.items = response.data; 
                 console.log(this.items)
               })
               .catch(error => {
